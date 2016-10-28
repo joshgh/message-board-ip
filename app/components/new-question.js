@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         notes: this.get('notes')
       };
+      this.set('newQuestionFormIsShowing', false);
       this.sendAction('saveQuestion', params);
     }
   }

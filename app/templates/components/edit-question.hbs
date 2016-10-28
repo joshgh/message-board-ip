@@ -1,0 +1,13 @@
+{{#if editQuestionFormIsShowing}}
+  <form>
+    <label for='author'>Author:</label>
+    {{input value=author id='author' placeholder=question.author}}
+    <label for='content'>Content:</label>
+    {{textarea value=content id='content' placeholder=question.content}}
+    <label for='notes'>Additional Notes:</label>
+    {{textarea value=notes id='notes' placeholder=question.notes}}
+    <button {{action 'updateQuestion' question}}>Update Question</button>
+  </form>
+{{else}}
+  <button {{action "showEditForm"}}>Edit Question</button>
+{{/if}}
