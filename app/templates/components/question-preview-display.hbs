@@ -1,4 +1,4 @@
-{{#each questions as |question|}}
+{{#each rankedQuestions as |question|}}
   <div class="question-preview">
     {{#link-to 'question' question.id}}
       {{question-preview-card question=question}}
