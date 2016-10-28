@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+
   actions: {
     deleteQuestion(question) {
       var answer_deletions = question.get('answers').map(function(answer) {
@@ -14,6 +15,7 @@ export default Ember.Route.extend({
       });
       this.transitionTo('index');
     },
+
     updateQuestion(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -22,6 +24,7 @@ export default Ember.Route.extend({
       });
       question.save();
     },
+
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
@@ -30,14 +33,15 @@ export default Ember.Route.extend({
         return question.save();
       });
     },
+
     upvote(question) {
       question.set('score', question.get('score') + 1);
       question.save();
     },
+
     downvote(question) {
       question.set('score', question.get('score') - 1);
       question.save();
     }
-
   }
 });
