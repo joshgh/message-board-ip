@@ -1,3 +1,5 @@
 {{#each questions as |question|}}
-  {{question-preview-card question=question}}
+  {{#link-to 'question' question.id}}
+    {{question-preview-card question=question}}
+  {{/link-to}}
 {{/each}}
