@@ -1,5 +1,7 @@
 {{#each questions as |question|}}
-  {{#link-to 'question' question.id}}
-    {{question-preview-card question=question}}
-  {{/link-to}}
+  <div class="question-preview">
+    {{#link-to 'question' question.id}}
+      {{question-preview-card question=question}}
+    {{/link-to}}
+  </div>
 {{/each}}

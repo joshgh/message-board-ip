@@ -1,5 +1,8 @@
-<p>Question asked by: {{question.author}}</p>
-<p>{{question.content}}</p>
-<p>Additional Notes:</p>
-<p>{{question.notes}}</p>
 <button {{action "deleteQuestion" question}}>Delete Question</button>
+<div class="question-text">
+  <p>{{question.author}}@messageboard: {{question.content}}</p>
+  <p>Additional Notes: {{question.notes}}</p>
+  <div class='answers'>
+    {{answer-display question=question}}
+  </div>
+</div>

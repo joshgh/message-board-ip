@@ -5,6 +5,7 @@
     <label for='content'>Content:</label>
     {{textarea value=content id='content'}}
     <button {{action 'saveAnswer'}}>Answer!</button>
+    <button {{action 'hideForm'}}>Nevermind</button>
   </form>
 {{else}}
   <button {{action "showAnswerForm"}}>Give an Answer</button>

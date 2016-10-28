@@ -6,12 +6,17 @@ export default Ember.Component.extend({
     showAnswerForm() {
       this.set('newAnswerFormIsShowing', true);
     },
+    hideForm() {
+      this.set('newAnswerFormIsShowing', false);
+    },
     saveAnswer() {
       var params = {
-        author: this.get('author'),
-        content: this.get('content'),
-        question: this.get('question')
+        author: this.get('author') || "anonymous",
+        content: this.get('content') || "",
+        question: this.get('question') || ""
       };
+      this.set('author', "");
+      this.set('content', "");
       this.set('newAnswerFormIsShowing', false);
       this.sendAction('saveAnswer', params);
     }
