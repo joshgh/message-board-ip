@@ -1,7 +1,12 @@
-# Message-board-ip
+# Q&A Message Board
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### Message Board to ask and answer questions, 28 October 2016
+
+#### By **Joshua Huffman**
+
+## Description
+
+This webapp allows users to post questions and other users to answer the questions. Users can up- or downvote questions and the questions are listed by score on the index page.
 
 ## Prerequisites
 
@@ -25,29 +30,23 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Specifications
 
-Make use of the many generators for code, try `ember help generate` for more details
+* app should allow a user to post a question
+* app should allow a user to view a list of questions asked
+* app should allow a user to post an answer to a question
+* app should allow a user to edit a question
 
-### Running Tests
+## Support and contact details
 
-* `ember test`
-* `ember test --server`
+Please contact me at j.m.huffman@gmail.com with any comments or questions.
 
-### Building
+## Technologies Used
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+This project was build using the Ember Framework.
 
-### Deploying
+### License
 
-Specify what it takes to deploy your app.
+*MIT License*
 
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Copyright (c) 2016 **Joshua Huffman**
