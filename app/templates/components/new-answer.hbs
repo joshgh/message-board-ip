@@ -1,1 +1,11 @@
-{{yield}}
+{{#if newAnswerFormIsShowing}}
+  <form>
+    <label for='author'>Author:</label>
+    {{input value=author id='author'}}
+    <label for='content'>Content:</label>
+    {{textarea value=content id='content'}}
+    <button {{action 'saveAnswer'}}>Answer!</button>
+  </form>
+{{else}}
+  <button {{action "showAnswerForm"}}>Give an Answer</button>
+{{/if}}
