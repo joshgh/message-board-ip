@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('author') || "anonymous",
         content: this.get('content') || "",
-        notes: this.get('notes') || "",
+        notes: this.get('notes') || "none",
         score: 0
       };
       this.set('author', "");
