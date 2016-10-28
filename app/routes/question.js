@@ -29,6 +29,14 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
+    },
+    upvote(question) {
+      question.set('score', question.get('score') + 1);
+      question.save();
+    },
+    downvote(question) {
+      question.set('score', question.get('score') - 1);
+      question.save();
     }
 
   }

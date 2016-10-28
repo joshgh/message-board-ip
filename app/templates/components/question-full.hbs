@@ -1,6 +1,6 @@
 <button {{action "deleteQuestion" question}}>Delete Question</button>
 <div class="question-text">
-  <p>{{question.author}}@messageboard: {{question.content}}</p>
+  <p>{{question.score}} {{question.author}}@messageboard: {{question.content}}</p>
   <p>Additional Notes: {{question.notes}}</p>
   <div class='answers'>
     {{answer-display question=question}}
