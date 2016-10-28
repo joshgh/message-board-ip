@@ -1,1 +1,14 @@
-{{yield}}
+{{#if newQuestionFormIsShowing}}
+  <form>
+    <label for='author'>Author:</label>
+    {{input value=author id='author'}}
+    <label for='content'>Content:</label>
+    {{textarea value=content id='content'}}
+    <label for='notes'>Additional Notes:</label>
+    {{textarea value=notes id='notes'}}
+    <button {{action 'saveQuestion'}}>Ask Question</button>
+  </form>
+
+{{else}}
+  <button {{ action "showForm"}}>New Question</button>
+{{/if}}
