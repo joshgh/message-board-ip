@@ -14,7 +14,8 @@ export default Ember.Component.extend({
         author: this.get('author') || "anonymous",
         content: this.get('content') || "",
         notes: this.get('notes') || "none",
-        score: 0
+        score: 0,
+        timestamp: new Date().toISOString()
       };
       this.set('author', "");
       this.set('content', "");

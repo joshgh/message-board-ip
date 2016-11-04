@@ -13,7 +13,9 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('author') || "anonymous",
         content: this.get('content') || "",
-        question: this.get('question') || ""
+        question: this.get('question') || "",
+        score: 0,
+        timestamp: new Date().toISOString()
       };
       this.set('author', "");
       this.set('content', "");
