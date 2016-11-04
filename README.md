@@ -1,12 +1,12 @@
-# Q&A Message Board
+# Q&A Message Board Week 2
 
-#### Message Board to ask and answer questions, 28 October 2016
+#### Message Board to ask and answer questions, 04 November 2016
 
 #### By **Joshua Huffman**
 
 ## Description
 
-This webapp allows users to post questions and other users to answer the questions. Users can up- or downvote questions and the questions are listed by score on the index page.
+This webapp allows users to post questions and other users to answer the questions. Users can rate answers to indicate if they are helpful or not.
 
 ## Prerequisites
 
@@ -36,6 +36,14 @@ You will need the following things properly installed on your computer.
 * app should allow a user to view a list of questions asked
 * app should allow a user to post an answer to a question
 * app should allow a user to edit a question
+
+## Additional Specifications for Week 2
+
+* app should create a timestamp for questions and answers
+* app should let users up or downvote answers
+* app should let users keep a login name throughout their session
+* app should indicate how many answers a question has
+* app should sort answers by rating
 
 ## Support and contact details
 
