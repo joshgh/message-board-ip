@@ -3,6 +3,6 @@
   <p>{{question.author}}@messageboard: {{question.content}}</p>
   <p>Additional Notes: {{question.notes}}</p>
   <div class='answers'>
-    {{answer-display question=question upvote="upvote" downvote="downvote"}}
+    {{answer-display answers=question.answers upvote="upvote" downvote="downvote"}}
   </div>
 </div>
