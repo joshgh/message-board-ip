@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  user: Ember.inject.service(),
   newAnswerFormIsShowing: false,
   actions: {
     showAnswerForm() {
@@ -11,13 +12,12 @@ export default Ember.Component.extend({
     },
     saveAnswer() {
       var params = {
-        author: this.get('author') || "anonymous",
+        author: this.get('user').get('userName'),
         content: this.get('content') || "",
         question: this.get('question') || "",
         score: 0,
         timestamp: new Date().toISOString()
       };
-      this.set('author', "");
       this.set('content', "");
       this.set('newAnswerFormIsShowing', false);
       this.sendAction('saveAnswer', params);
