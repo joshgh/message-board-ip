@@ -5,5 +5,6 @@ export default DS.Model.extend({
   content: DS.attr(),
   notes: DS.attr(),
   score: DS.attr(),
+  timestamp: DS.attr(),
   answers: DS.hasMany('answer', { async: true })
 });
