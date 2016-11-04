@@ -1,3 +1,5 @@
-<p>-({{answer.score}}) {{answer.author}} responded: {{answer.content}}</p>
-<p>({{pretty-timestamp answer.timestamp}})</p>
-{{vote-component answer=answer upvote="upvote" downvote="downvote"}}
+<div class="answer-card">
+  <p>{{answer.author}} responded: {{answer.content}}</p>
+  <p>Score: {{answer.score}} {{vote-component answer=answer upvote="upvote" downvote="downvote"}}</p>
+  <p>({{pretty-timestamp answer.timestamp}})</p>
+</div>

@@ -84,3 +84,15 @@ button {
 .answers {
   padding-left: 1em;
 }
+
+div.answer-card {
+  border-top: 1px solid $green;
+  button {
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid $green;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

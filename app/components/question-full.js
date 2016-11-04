@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   user: Ember.inject.service(),
-  originalPoster: Ember.computed('user', 'question', function() {
+  originalPoster: Ember.computed('user.userName', 'question', function() {
     if (this.get('user').get('userName') === this.get('question').get('author')) {
       return true;
     } else {
