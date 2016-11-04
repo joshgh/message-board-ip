@@ -1,14 +1,16 @@
-{{#if newQuestionFormIsShowing}}
-  <form>
-    <label for='author'>Author:</label>
-    {{input value=author id='author'}}
-    <label for='content'>Content:</label>
-    {{textarea value=content id='content'}}
-    <label for='notes'>Additional Notes:</label>
-    {{textarea value=notes id='notes'}}
-    <button {{action 'saveQuestion'}}>Ask Question</button>
-    <button {{action 'hideForm'}}>Nevermind</button>
-  </form>
+{{#if user.userName}}
+  {{#if newQuestionFormIsShowing}}
+    <form>
+      <label for='content'>Content:</label>
+      {{textarea value=content id='content'}}
+      <label for='notes'>Additional Notes:</label>
+      {{textarea value=notes id='notes'}}
+      <button {{action 'saveQuestion'}}>Ask Question</button>
+      <button {{action 'hideForm'}}>Nevermind</button>
+    </form>
+  {{else}}
+    <button {{action "showForm"}}>New Question</button>
+  {{/if}}
 {{else}}
-  <button {{action "showForm"}}>New Question</button>
+  <p>Please login to ask a question</p>
 {{/if}}
