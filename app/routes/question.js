@@ -34,14 +34,14 @@ export default Ember.Route.extend({
       });
     },
 
-    upvote(question) {
-      question.set('score', question.get('score') + 1);
-      question.save();
+    upvote(answer) {
+      answer.set('score', answer.get('score') + 1);
+      answer.save();
     },
 
-    downvote(question) {
-      question.set('score', question.get('score') - 1);
-      question.save();
+    downvote(answer) {
+      answer.set('score', answer.get('score') - 1);
+      answer.save();
     }
   }
 });

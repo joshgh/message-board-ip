@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    upvote(question) {
-      this.sendAction('upvote', question);
+    upvote(answer) {
+      this.sendAction('upvote', answer);
     },
-    downvote(question) {
-      this.sendAction('downvote', question);
+    downvote(answer) {
+      this.sendAction('downvote', answer);
     }
   }
 });
