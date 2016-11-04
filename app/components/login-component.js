@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   actions: {
     login(){
       this.get('user').login(this.get('name'));
+      this.set('name', "");
     },
     logout(){
       this.get('user').logout();
