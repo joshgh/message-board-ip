@@ -8,7 +8,7 @@
     <form>
       <label for="inputName">Name</label>
       {{input id="inputName" value=name}}
-      <button {{action 'login'}}>Sign in</button>
+      <button {{action 'login'}} disabled={{isInvalid}}>Sign in</button>
     </form>
   {{/if}}
 </div>
