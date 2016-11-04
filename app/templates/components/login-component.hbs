@@ -1,0 +1,11 @@
+{{#if user.userName}}
+  <p>Signed in as {{user.userName}}</p>
+  <button {{action 'logout'}}>Sign Out</button>
+{{else}}
+  <h3>Sign In</h3>
+  <form>
+    <label for="inputName">Name</label>
+    {{input id="inputName" value=name}}
+    <button {{action 'login'}}>Sign in</button>
+  </form>
+{{/if}}
