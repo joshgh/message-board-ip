@@ -5,7 +5,7 @@
       {{textarea value=content id='content'}}
       <label for='notes'>Additional Notes:</label>
       {{textarea value=notes id='notes'}}
-      <button {{action 'saveQuestion'}}>Ask Question</button>
+      <button {{action 'saveQuestion'}} disabled={{isInvalid}}>Ask Question</button>
       <button {{action 'hideForm'}}>Nevermind</button>
     </form>
   {{else}}
