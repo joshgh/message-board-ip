@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  user: Ember.inject.service(),
+  originalPoster: Ember.computed('user', 'question', function() {
+    if (this.get('user').get('userName') === this.get('question').get('author')) {
+      return true;
+    } else {
+      return false;
+    }
+  }),
   actions: {
     updateQuestion(question, params) {
       this.sendAction('updateQuestion', question, params);

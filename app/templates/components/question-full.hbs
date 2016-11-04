@@ -6,5 +6,7 @@
     {{answer-display answers=question.answers upvote="upvote" downvote="downvote"}}
   </div>
 </div>
-{{edit-question question=question updateQuestion="updateQuestion"}}
-<button {{action "deleteQuestion" question}}>Delete Question</button>
+{{#if originalPoster}}
+  {{edit-question question=question updateQuestion="updateQuestion"}}
+  <button {{action "deleteQuestion" question}}>Delete Question</button>
+{{/if}}
