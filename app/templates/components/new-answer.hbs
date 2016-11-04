@@ -3,7 +3,7 @@
     <form>
       <label for='content'>Your Answer:</label>
       {{textarea value=content id='content'}}
-      <button {{action 'saveAnswer'}}>Answer!</button>
+      <button {{action 'saveAnswer'}} disabled={{isInvalid}}>Answer!</button>
       <button {{action 'hideForm'}}>Nevermind</button>
     </form>
   {{else}}

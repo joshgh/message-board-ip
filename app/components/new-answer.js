@@ -1,13 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  content: "",
   user: Ember.inject.service(),
   newAnswerFormIsShowing: false,
+  isInvalid: Ember.computed('content', function() {
+    let patt = /^$|^\s+$/;
+    return patt.test(this.get('content'));
+  }),
   actions: {
     showAnswerForm() {
       this.set('newAnswerFormIsShowing', true);
     },
     hideForm() {
+      this.set('content', "");
       this.set('newAnswerFormIsShowing', false);
     },
     saveAnswer() {
