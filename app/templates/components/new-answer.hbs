@@ -1,7 +1,7 @@
 {{#if user.userName}}
   {{#if newAnswerFormIsShowing}}
     <form>
-      <label for='content'>Content:</label>
+      <label for='content'>Your Answer:</label>
       {{textarea value=content id='content'}}
       <button {{action 'saveAnswer'}}>Answer!</button>
       <button {{action 'hideForm'}}>Nevermind</button>

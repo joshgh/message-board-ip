@@ -1,7 +1,7 @@
 {{#if user.userName}}
   {{#if newQuestionFormIsShowing}}
     <form>
-      <label for='content'>Content:</label>
+      <label for='content'>Your Question:</label>
       {{textarea value=content id='content'}}
       <label for='notes'>Additional Notes:</label>
       {{textarea value=notes id='notes'}}
@@ -12,5 +12,5 @@
     <button {{action "showForm"}}>New Question</button>
   {{/if}}
 {{else}}
-  <p>Please login to ask a question</p>
+  <p>Please sign in to ask a question</p>
 {{/if}}
